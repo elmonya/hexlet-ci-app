@@ -1,0 +1,18 @@
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Node.js
+        run: |
+          sudo apt update
+          sudo apt install -y nodejs npm
+      
+      - name: Install npm
+        run: npm install
+      
+      - name: Lint Code
+        run: npm run lint
+      
+      - name: Run Tests
+        run: npm test
+
